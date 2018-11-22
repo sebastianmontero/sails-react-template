@@ -1,0 +1,54 @@
+{
+    "name": "sails-react-template",
+    "private": true,
+    "version": "0.0.0",
+    "description": "A react salis template project",
+    "keywords": [],
+    "dependencies": {
+        "@sailshq/connect-redis": "^3.2.1",
+        "@sailshq/lodash": "^3.10.3",
+        "@sailshq/socket.io-redis": "^5.2.0",
+        "grunt": "1.0.1",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3",
+        "react-router-dom": "^4.3.1",
+        "sails": "^1.1.0",
+        "sails-hook-grunt": "^3.1.0",
+        "sails-hook-orm": "^2.1.1",
+        "sails-hook-sockets": "^1.5.5"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.1.6",
+        "@babel/node": "^7.0.0",
+        "@babel/plugin-proposal-class-properties": "^7.1.0",
+        "@babel/plugin-transform-react-constant-elements": "^7.0.0",
+        "@babel/preset-env": "^7.1.6",
+        "@babel/preset-react": "^7.0.0",
+        "@sailshq/eslint": "^4.19.3",
+        "babel-loader": "^8.0.4",
+        "html-webpack-plugin": "^3.2.0",
+        "npm-run-all": "^4.1.3",
+        "opn": "^5.4.0",
+        "webpack": "^4.26.0",
+        "webpack-cli": "^3.1.2",
+        "webpack-dev-server": "^3.1.10",
+        "webpack-hot-middleware": "^2.24.3"
+    },
+    "scripts": {
+        "start": "npm-run-all --parallel open:client lift",
+        "start:debug": "npm-run-all --parallel open:client debug",
+        "open:client": "babel-node tools/dev.js",
+        "build": "npm run build:prod",
+        "build:dev": "webpack --mode development",
+        "build:prod": "webpack --mode production",
+        "clean": "rimraf .tmp && mkdirp .tmp/public",
+        "lift": "sails lift",
+        "debug": "node --inspect app.js"
+    },
+    "main": "app.js",
+    "author": "sebastian",
+    "license": "",
+    "engines": {
+        "node": "^8.12"
+    }
+}
