@@ -17,7 +17,10 @@ const serverConfig = {
     publicPath: webpackConfig.output.publicPath,
     historyApiFallback: true,
     proxy: {
-        '/api/*': 'http://localhost:1337'
+        '/api': {
+            target: 'http://localhost:1337',
+            pathRewrite: { '^/api': '' }
+        }
     },
     headers: {
         'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -32,7 +35,7 @@ const server = new WebpackDevServer(compiler, serverConfig);
 server.use(require('webpack-hot-middleware')(compiler));
 
 const host = 'localhost';
-const port = 8080;
+const port = 8088;
 
 server.listen(port, host, (err) => {
     if (err) {

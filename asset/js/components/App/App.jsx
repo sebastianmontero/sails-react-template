@@ -6,7 +6,7 @@ import {
     Header,
     Home,
     About,
-    Login,
+    Signin,
     Signup,
 } from '..';
 
@@ -21,7 +21,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route path="/about" component={About} />
-                        <Route path="/login" component={Login} />
+                        <Route path="/signin" component={Signin} />
                         <Route path="/signup" component={Signup} />
                     </Switch>
                 </div>

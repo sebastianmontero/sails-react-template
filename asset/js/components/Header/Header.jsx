@@ -22,9 +22,9 @@ const Header = props => (
                         About
                     </NavItem>
                 </LinkContainer>
-                <LinkContainer to="/login">
+                <LinkContainer to="/signin">
                     <NavItem>
-                        Login
+                        Signin
                     </NavItem>
                 </LinkContainer>
                 <LinkContainer to="/signup">

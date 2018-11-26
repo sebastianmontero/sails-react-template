@@ -2,7 +2,7 @@ import App from './App';
 import Header from './Header';
 import Home from './Home';
 import About from './About';
-import Login from './Login';
+import Signin from './Signin';
 import Signup from './Signup';
 
 export {
@@ -10,6 +10,6 @@ export {
     Header,
     Home,
     About,
-    Login,
+    Signin,
     Signup,
 };
