@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const precss = require('precss');
@@ -56,6 +57,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'asset/index.html'
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new BrowserSyncPlugin({
+            host: 'localhost',
+            port: 3000,
+            proxy: 'http://localhost:8088',
+        }, {
+                reload: false, //view : https://www.youtube.com/watch?v=1j8C1V_DPQ4&t=726s
+            }),
     ]
 };

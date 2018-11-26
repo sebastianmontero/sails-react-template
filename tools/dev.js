@@ -48,7 +48,7 @@ server.listen(port, host, (err) => {
         const openURL = `${protocol}://${openHost}:${port}`;
         const openMsg = `[webpack-dev-server] started: opening the app: ${openURL}`;
         console.log(openMsg);
-        opn(openURL);
+        //opn(openURL);
     }
 });
 
